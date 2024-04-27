@@ -8,15 +8,14 @@ import {
 } from "react-router-dom";
 import Root from './component/Root/Root';
 import Home from './component/Home/Home';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import CardDitals from './component/CardDitals/CardDitals';
 import Login from './component/Login/Login';
 import RegisterPage from './component/Register Page/RegisterPage';
 import React from 'react';
-import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
-import UserProfile from './component/UserProfile/UserProfile';
-import PrivateRoute from './component/PrivateRoute/PrivateRoute';
-import UpdateProfile from './component/UpdateProfile/UpdateProfile';
 import { HelmetProvider } from 'react-helmet-async';
+import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
+
 
 
 const router = createBrowserRouter([
@@ -41,14 +40,7 @@ const router = createBrowserRouter([
         path:'/register',
         element: <RegisterPage></RegisterPage>
       },
-      {
-        path: '/userprofile',
-        element: <UserProfile></UserProfile>
-      },
-      {
-        path: '/updateprofile',
-        element: <UpdateProfile></UpdateProfile>
-      }
+     
     ]
   },
 ]);
