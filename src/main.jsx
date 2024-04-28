@@ -15,6 +15,9 @@ import RegisterPage from './component/Register Page/RegisterPage';
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
+import AddCraftItem from './component/AddCraftItem/AddCraftItem';
+import AllArtcraftItems from './component/AllArtcraftItems/AllArtcraftItems';
+import MyArtCraftList from './component/MyArtCraftList/MyArtCraftList';
 
 
 
@@ -40,6 +43,19 @@ const router = createBrowserRouter([
         path:'/register',
         element: <RegisterPage></RegisterPage>
       },
+      {
+        path: '/addcraft',
+        element: <AddCraftItem></AddCraftItem>
+      },
+      {
+        path: '/allcard',
+        element: <AllArtcraftItems></AllArtcraftItems>
+      },
+      {
+        path: '/mycard',
+        element: <MyArtCraftList></MyArtCraftList>
+      }
+
      
     ]
   },

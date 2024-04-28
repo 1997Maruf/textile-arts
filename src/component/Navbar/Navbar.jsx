@@ -12,11 +12,12 @@ const Navbar = () => {
       <li><NavLink to='/'>Home</NavLink></li>
       <li><NavLink to='/login'>Login</NavLink></li>
       <li><NavLink to='/register'>Register Page</NavLink></li>
+      <li><NavLink to='allcard'>All Art & craft Items</NavLink></li>
 
       {
         user ? <div className="flex">
-        <li> <NavLink to='/userprofile' >User Profile</NavLink> </li>
-        <li> <NavLink to='/updateprofile' >Update Profile</NavLink> </li>
+        <li> <NavLink to='/addcraft' >Add Craft Item</NavLink> </li>
+        <li> <NavLink to='/mycard' >My Art&Craft List</NavLink> </li>
         </div> : <p></p>
       }
     </>

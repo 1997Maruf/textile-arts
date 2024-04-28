@@ -15,3 +15,4 @@ Currently, two official plugins are available:
 .npm install --save react-toastify
  .npm install -g firebase-tools
  .npm install react-hook-form
+ .npm install sweetalert2
