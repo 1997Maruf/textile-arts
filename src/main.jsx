@@ -18,6 +18,7 @@ import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import AddCraftItem from './component/AddCraftItem/AddCraftItem';
 import AllArtcraftItems from './component/AllArtcraftItems/AllArtcraftItems';
 import MyArtCraftList from './component/MyArtCraftList/MyArtCraftList';
+import UpdatePage from './component/UpdatePage/UpdatePage';
 
 
 
@@ -32,9 +33,9 @@ const router = createBrowserRouter([
         loader: ()=> fetch('http://localhost:5000/craft')
       },
       {
-        path:'/card/:id',
+        path:'/card',
         element: <PrivateRoute> <CardDitals></CardDitals> </PrivateRoute>,
-        
+       
       },
       {
         path: '/login',
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: '/mycard',
         element: <PrivateRoute><MyArtCraftList></MyArtCraftList></PrivateRoute>
+      },
+      {
+        path:'/update',
+        element:<UpdatePage></UpdatePage>
       }
 
      
