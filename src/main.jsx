@@ -28,12 +28,13 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch('http://localhost:5000/craft')
       },
       {
         path:'/card/:id',
         element: <PrivateRoute> <CardDitals></CardDitals> </PrivateRoute>,
-        loader: () => fetch('../json.json')
+        
       },
       {
         path: '/login',
@@ -45,15 +46,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/addcraft',
-        element: <AddCraftItem></AddCraftItem>
+        element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
       },
       {
         path: '/allcard',
-        element: <AllArtcraftItems></AllArtcraftItems>
+        element: <AllArtcraftItems></AllArtcraftItems>,
+        loader: ()=> fetch('http://localhost:5000/craft')
       },
       {
         path: '/mycard',
-        element: <MyArtCraftList></MyArtCraftList>
+        element: <PrivateRoute><MyArtCraftList></MyArtCraftList></PrivateRoute>
       }
 
      

@@ -18,17 +18,17 @@ const AddCraftItem = () => {
         const photo = form.photo.value;
         const description = form.description.value;
 
-        const newCoffee = { name,email,item,sub,price,rating ,customization, processing,stockStatus,photo,description }
+        const newCraft = { name,email,item,sub,price,rating ,customization, processing,stockStatus,photo,description }
 
-        console.log(newCoffee);
+        console.log(newCraft);
 
         // send data to the server
-        fetch('https://coffee-store-server-74xiae2di-jhankarphero.vercel.app/coffee', {
+        fetch('http://localhost:5000/craft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newCoffee)
+            body: JSON.stringify(newCraft)
         })
             .then(res => res.json())
             .then(data => {
@@ -36,7 +36,7 @@ const AddCraftItem = () => {
                 if(data.insertedId){
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Coffee Added Successfully',
+                        text: 'Craft Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                       })

@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
 
 
-const CardEdt = ({card}) => {
+const CardEdt = ({craft}) => {
 
-    const {image,estate_title,segment_name,description,area,location,id} = card;
-    // 
+    const {_id,name,email,item,sub,price,rating ,customization, processing,stockStatus,photo,description} = craft;
+    
     return (
         <div>
           <div className="card  bg-base-100 shadow-xl">
-  <figure><img src={image} alt="Shoes" /></figure>
+  <figure><img src={photo} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{estate_title}</h2>
-    <h2 className="card-title">{segment_name}</h2>
+    <h2 className="card-title">{item}</h2>
+    <h2 className="card-title">{sub}</h2>
     <p>{description}</p>
-    <p>{area}</p>
-    <p>{location}</p>
+    <p>Price : {price}</p>
+    <p>Rating : {rating}</p>
+    <p>Customization : {customization}</p>
     <div className="">
-      <Link to={`/card/${id}`} className="btn btn-primary">Buy Now</Link>
+      <Link to={`/card/${_id}`} className="btn btn-primary">View Details</Link>
     </div>
   </div>
 </div>

@@ -10,16 +10,11 @@ const Navbar = () => {
     const link = <>
       
       <li><NavLink to='/'>Home</NavLink></li>
-      <li><NavLink to='/login'>Login</NavLink></li>
-      <li><NavLink to='/register'>Register Page</NavLink></li>
       <li><NavLink to='allcard'>All Art & craft Items</NavLink></li>
-
-      {
-        user ? <div className="flex">
         <li> <NavLink to='/addcraft' >Add Craft Item</NavLink> </li>
         <li> <NavLink to='/mycard' >My Art&Craft List</NavLink> </li>
-        </div> : <p></p>
-      }
+
+    
     </>
     return (
         
@@ -50,7 +45,10 @@ const Navbar = () => {
                  }
                  <button className="mr-10" onClick={logOut}>Log Out</button>
               </div>
-             :  <li><NavLink className="mr-10" to='/login'>Login</NavLink></li>
+             :  <div>
+              <li><NavLink className="mr-10" to='/login'>Login</NavLink></li>
+              <li><NavLink to='/register'>Register Page</NavLink></li>
+             </div>
           }
         </div>
       </div>
