@@ -4,12 +4,14 @@ import { Helmet } from "react-helmet-async";
 import Carousel from "../Carousel/Carousel";
 import { Link, useLoaderData } from "react-router-dom";
 import CardEdt from "../CardEdt/CardEdt";
+import { useState } from "react";
 
 
 
 const Home = () => {
 
     const crafts = useLoaderData();
+    const [artCrafts, setArtCrafts] = useState(crafts);
     
     return (
         <div>
@@ -20,7 +22,7 @@ const Home = () => {
        
          <div className="grid grid-cols-3 gap-6 mx-44 mt-20">
          {
-            crafts.map(craft => <CardEdt key={craft._id} craft={craft}></CardEdt>)
+            crafts.map(craft => <CardEdt key={craft._id} craft={craft} artCrafts={artCrafts} setArtCrafts={setArtCrafts}></CardEdt>)
            }
          </div>
             <h2 className="text-4xl text-center font-bold pt-9">CUSTOMER FEEDBACK</h2>

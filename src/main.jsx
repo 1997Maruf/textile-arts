@@ -33,9 +33,9 @@ const router = createBrowserRouter([
         loader: ()=> fetch('http://localhost:5000/craft')
       },
       {
-        path:'/card',
+        path:'/card/:id',
         element: <PrivateRoute> <CardDitals></CardDitals> </PrivateRoute>,
-       
+        loader: (params)=> fetch(`http://localhost:5000/craft/${params.id}`)
       },
       {
         path: '/login',
@@ -59,8 +59,9 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyArtCraftList></MyArtCraftList></PrivateRoute>
       },
       {
-        path:'/update',
-        element:<UpdatePage></UpdatePage>
+        path:'/update/:id',
+        element:<UpdatePage></UpdatePage>,
+        loader: ({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
       }
 
      

@@ -1,30 +1,29 @@
-// import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 
 const CardDitals = () => {
-    // const crafts = useLoaderData();
-    // console.log(crafts)
-    // const {_id} = useParams();
-    // const craftId = parseInt(_id);
-    // const craft = crafts.find(card => card.id == craftId)
-    // console.log(craft)
+    const crafts = useLoaderData();
+    const {_id,name,email,item,sub,price,rating ,customization, processing,stockStatus,photo,description} = crafts;
+   
+
+    const craftId = parseInt(_id);
+    const craft = crafts.find(card => card.id == craftId)
+    console.log(craft)
     return (
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content ">
     <div className="">
-        {/* <img src={card.image} alt="" />
-      <h1 className="text-4xl my-4 font-bold">{card.estate_title}</h1>
-      <h1 className="text-3xl font-bold">{card.segment_name}</h1>
-      <p className="py-2 text-start font-medium	">{card.description}</p>
-      <p className="py-2 font-medium	"><span className="font-semibold	">price :</span> {card.price}</p>
-      <p className="py-2 font-medium"><span className="font-semibold	">status :</span> {card.status}</p>
-      <p className="py-2 font-medium"><span className="font-semibold	">area :</span> {card.area}</p>
-      <p className="py-2 font-medium"><span className="font-semibold">location :</span> {card.area}</p>
+        <img src={craft.image} alt="" />
+      <h1 className="text-4xl my-4 font-bold">{craft.estate_title}</h1>
+      <h1 className="text-3xl font-bold">{craft.segment_name}</h1>
+      <p className="py-2 text-start font-medium	">{craft.description}</p>
+      <p className="py-2 font-medium	"><span className="font-semibold	">price :</span> {craft.price}</p>
+      <p className="py-2 font-medium"><span className="font-semibold	">status :</span> {craft.status}</p>
+      <p className="py-2 font-medium"><span className="font-semibold	">area :</span> {craft.area}</p>
+      <p className="py-2 font-medium"><span className="font-semibold">location :</span> {craft.area}</p>
       <p className="font-semibold	">facilities</p>
-      <p className="py-2 font-medium">* {card.facilities[0]}</p>
-      <p className="py-2 font-medium">* {card.facilities[1]}</p>
-      <p className="py-2 font-medium">* {card.facilities[2]}</p>
-      <Link to='/' className="btn btn-primary">Go Home</Link> */}
+  
+      <Link to='/' className="btn btn-primary">Go Home</Link>
     </div>
   </div>
 </div>
