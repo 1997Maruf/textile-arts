@@ -35,7 +35,8 @@ const router = createBrowserRouter([
       {
         path:'/card/:id',
         element: <PrivateRoute> <CardDitals></CardDitals> </PrivateRoute>,
-        loader: (params)=> fetch(`http://localhost:5000/craft/${params.id}`)
+        loader: ({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+        
       },
       {
         path: '/login',

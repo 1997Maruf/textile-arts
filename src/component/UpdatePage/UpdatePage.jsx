@@ -1,10 +1,11 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const UpdatePage = () => {
     
     const craft = useLoaderData();
-    const {_id,name,email,item,sub,price,rating ,customization, processing,stockStatus,photo,description} = craft;
+    const {_id,item,sub,price,rating ,customization, processing,stockStatus,photo,description} = craft;
 
         const handelUpdate = event => {
 
@@ -12,8 +13,7 @@ const UpdatePage = () => {
     
             const form = event.target;
     
-            const name = form.name.value;
-            const email = form.email.value;
+           
             const item = form.item.value;
             const sub = form.sub.value;
             const price = form.price.value;
@@ -24,7 +24,7 @@ const UpdatePage = () => {
             const photo = form.photo.value;
             const description = form.description.value;
     
-            const newCraft = { name,email,item,sub,price,rating ,customization, processing,stockStatus,photo,description }
+            const newCraft = { item,sub,price,rating ,customization, processing,stockStatus,photo,description }
     
             console.log(newCraft);
          
@@ -39,7 +39,7 @@ const UpdatePage = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if(data.modifiedCount > 0){
                     Swal.fire({
                         title: 'Success!',
                         text: 'Craft Update Successfully',
