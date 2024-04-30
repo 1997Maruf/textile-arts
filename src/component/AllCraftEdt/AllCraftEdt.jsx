@@ -11,8 +11,8 @@ const AllCraftEdt = ({craft}) => {
       <tr>
        
         <th>Name</th>
-        <th className="w-[600px]">Job</th>
-        <th>Favorite Color</th>
+        <th className="w-[600px]">Price</th>
+        <th>Rating</th>
       </tr>
     </thead>
     <tbody>

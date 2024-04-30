@@ -58,15 +58,15 @@ const AddCraftItem = () => {
                             <span className="label-text">User Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" placeholder="User Name" className="input input-bordered w-full" />
+                            <input type="text" name="name" placeholder="User Name" className="input  w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">User Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="email" name="email" placeholder="User Email" className="input input-bordered w-full" />
+                            <input type="email" name="email" placeholder="User Email" className="input  w-full" />
                         </label>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const AddCraftItem = () => {
                             <input type="text" name="item" placeholder="item_name" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">subcategory_Name</span>
                         </label>
@@ -99,7 +99,7 @@ const AddCraftItem = () => {
                             <input type="text" name="price" placeholder="price" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">rating</span>
                         </label>
@@ -117,7 +117,7 @@ const AddCraftItem = () => {
                             <input type="text" name="customization" placeholder="customization" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">processing_time</span>
                         </label>

@@ -20,13 +20,15 @@ const Home = () => {
             </Helmet>
            <Carousel></Carousel> 
        
-         <div className="grid grid-cols-3 gap-6 mx-44 mt-20">
+         <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 sm:mx-10 lg:mx-32 mt-20">
          {
             crafts.map(craft => <CardEdt key={craft._id} craft={craft} artCrafts={artCrafts} setArtCrafts={setArtCrafts}></CardEdt>)
            }
          </div>
-            <h2 className="text-4xl text-center font-bold pt-9">CUSTOMER FEEDBACK</h2>
-          <div className="carousel w-full mt-20">
+           
+         <div>
+         <h2 className="text-4xl text-center font-bold mt-20 pt-9">CUSTOMER FEEDBACK</h2>
+         <div className="carousel w-full mt-20 py-36">
          <div id="slide1" className="carousel-item relative w-full">
          <p className="mx-auto text-[20px] text-center">"I absolutely love shopping at Textile Arts! The selection of materials is fantastic, and the quality is top-notch. Plus, their customer <br></br>service is excellent - always helpful and friendly. I've learned so much from their tutorials and blog posts. Highly recommend!"</p>
            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -56,8 +58,9 @@ const Home = () => {
            </div>
          </div>      
     </div>
+         </div>
 
-          <div className="  bg-base-200 mt-10 pb-10">
+          <div className="  bg-base-200 mt-10 py-32">
             <div className=" text-center">
              <div className=" mx-56">
               <h1 className="text-5xl font-bold pt-9">ABOUT US</h1>

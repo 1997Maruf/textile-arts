@@ -19,6 +19,8 @@ import AddCraftItem from './component/AddCraftItem/AddCraftItem';
 import AllArtcraftItems from './component/AllArtcraftItems/AllArtcraftItems';
 import MyArtCraftList from './component/MyArtCraftList/MyArtCraftList';
 import UpdatePage from './component/UpdatePage/UpdatePage';
+import CategoriesCard from './component/CategoriesCard/CategoriesCard';
+import Eror from './Eror/Eror';
 
 
 
@@ -26,6 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Eror></Eror>,
     children:[
       {
         path: '/',
@@ -63,6 +66,11 @@ const router = createBrowserRouter([
         path:'/update/:id',
         element:<UpdatePage></UpdatePage>,
         loader: ({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+      },
+      {
+        path: '/embroidery',
+        element:<CategoriesCard></CategoriesCard>,
+        loader: ()=> fetch('http://localhost:5000/embroidery')
       }
 
      

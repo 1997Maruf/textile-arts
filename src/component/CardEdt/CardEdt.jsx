@@ -42,9 +42,9 @@ const CardEdt = ({craft}) => {
     }
    
     return (
-        <div>
-          <div className="card  bg-base-100 shadow-xl">
-  <figure><img src={photo} alt="Shoes" /></figure>
+        <Link to={'/embroidery'}>
+          <div className="card  bg-base-100 ">
+  <figure><img src={photo} alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title">{item}</h2>
     <h2 className="card-title">{sub}</h2>
@@ -61,7 +61,7 @@ const CardEdt = ({craft}) => {
     </div>
   </div>
 </div>
-        </div>
+        </Link>
     );
 };
 
