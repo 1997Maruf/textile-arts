@@ -29,7 +29,7 @@ const UpdatePage = () => {
             console.log(newCraft);
          
 
-            fetch(`http://localhost:5000/craft/${_id}`, {
+            fetch(`https://b9a10-server-side-1997-maruf.vercel.app/craft/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

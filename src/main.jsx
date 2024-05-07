@@ -33,12 +33,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/craft')
+        loader: ()=> fetch('https://b9a10-server-side-1997-maruf.vercel.app/craft')
       },
       {
         path:'/card/:id',
         element: <PrivateRoute> <CardDitals></CardDitals> </PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+        loader: ({params})=> fetch(`https://b9a10-server-side-1997-maruf.vercel.app/craft/${params.id}`)
         
       },
       {
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: '/allcard',
         element: <AllArtcraftItems></AllArtcraftItems>,
-        loader: ()=> fetch('http://localhost:5000/craft')
+        loader: ()=> fetch('https://b9a10-server-side-1997-maruf.vercel.app/craft')
       },
       {
         path: '/mycard',
@@ -64,13 +64,13 @@ const router = createBrowserRouter([
       },
       {
         path:'/update/:id',
-        element:<UpdatePage></UpdatePage>,
-        loader: ({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+        element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
+        loader: ({params})=> fetch(`https://b9a10-server-side-1997-maruf.vercel.app/craft/${params.id}`)
       },
       {
         path: '/embroidery',
         element:<CategoriesCard></CategoriesCard>,
-        loader: ()=> fetch('http://localhost:5000/embroidery')
+        loader: ()=> fetch('https://b9a10-server-side-1997-maruf.vercel.app/embroidery')
       }
 
      

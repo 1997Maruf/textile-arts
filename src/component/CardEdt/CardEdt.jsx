@@ -23,7 +23,7 @@ const CardEdt = ({craft}) => {
           //   "Your file has been deleted.",
           //    "success"
           // )
-         fetch(`http://localhost:5000/craft/${_id}`,{
+         fetch(`https://b9a10-server-side-1997-maruf.vercel.app/craft/${_id}`,{
           method: 'DELETE'
          } )
          .then(res => res.json())

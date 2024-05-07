@@ -25,7 +25,7 @@ const AddCraftItem = () => {
         console.log(newCraft);
 
         // send data to the server
-        fetch('http://localhost:5000/craft', {
+        fetch('https://b9a10-server-side-1997-maruf.vercel.app/craft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

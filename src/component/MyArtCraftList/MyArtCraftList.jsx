@@ -8,7 +8,7 @@ const MyArtCraftList = () => {
     const [crafts, setCrafts] = useState([]);
    
     useEffect(()=>{
-       fetch(`http://localhost:5000/craftList/${user?.email}`)
+       fetch(`https://b9a10-server-side-1997-maruf.vercel.app/craftList/${user?.email}`)
        .then(res => res.json())
        .then(data =>{
         setCrafts(data);

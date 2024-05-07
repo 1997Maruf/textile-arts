@@ -6,6 +6,8 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa3d5c3e-10df-4ad2-80ac-c518dbcfc8b7/deploy-status)](https://app.netlify.com/sites/sparkling-caramel-31384b/deploys)
+
 
 .npm install -D tailwindcss postcss autoprefixer
 .npx tailwindcss init -p
