@@ -26,7 +26,7 @@ const Home = () => {
            }
          </div>
            
-         <div>
+         <div className="sm:mx-10">
          <h2 className="text-4xl text-center font-bold mt-20 pt-9">CUSTOMER FEEDBACK</h2>
          <div className="carousel w-full mt-20 py-36">
          <div id="slide1" className="carousel-item relative w-full">
@@ -60,9 +60,9 @@ const Home = () => {
     </div>
          </div>
 
-          <div className="  bg-base-200 mt-10 py-32">
+          <div className="  bg-base-200 mt-10 w- py-32">
             <div className=" text-center">
-             <div className=" mx-56">
+             <div className=" lg:mx-56 sm:mx-10">
               <h1 className="text-5xl font-bold pt-9">ABOUT US</h1>
               <p className="py-6">At Textile Arts, we're passionate about the timeless craft of textile creation. From the delicate artistry of embroidery to the cozy comfort of handmade quilts, our love for textiles knows no bounds.
             Our journey began with a shared vision: to create a space where artisans, hobbyists, and enthusiasts alike could come together to celebrate and explore the world of textile arts. What started as a humble idea has blossomed into a vibrant community, united by our appreciation for craftsmanship and creativity.</p>
