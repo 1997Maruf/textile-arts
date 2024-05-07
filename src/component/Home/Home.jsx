@@ -20,7 +20,7 @@ const Home = () => {
             </Helmet>
            <Carousel></Carousel> 
        
-         <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 sm:mx-10 lg:mx-32 -mt-80">
+         <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 sm:mx-10 lg:mx-32 mt-20">
          {
             crafts.map(craft => <CardEdt key={craft._id} craft={craft} artCrafts={artCrafts} setArtCrafts={setArtCrafts}></CardEdt>)
            }
